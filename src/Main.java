@@ -17,7 +17,7 @@ public class Main {
            int qty = c.products.get(p);
            subamount += p.getPrice() * qty;
 
-           // ✅ collect shipable items repeated by quantity
+           // ✅ add shipping items to list and add also their quantity
            if (p instanceof shipping) {
 
                    shippingProducts.add((shipping) p);
