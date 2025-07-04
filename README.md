@@ -4,32 +4,32 @@ This is a simple console-based e-commerce system built in Java that simulates co
 ## ✅ Features
 - Product Types:
 
-Supports both expirable (e.g., Cheese, Biscuits) and non-expirable (e.g., TV, Mobile Cards) products.
+- Supports both expirable (e.g., Cheese, Biscuits) and non-expirable (e.g., TV, Mobile Cards) products.
 
-Differentiates between shippable and non-shippable products.
+- Differentiates between shippable and non-shippable products.
 
-- Cart System:
+### Cart System:
 
-Allows customers to add items to their cart in specific quantities.
+- Allows customers to add items to their cart in specific quantities.
 
-Ensures cart quantities don't exceed product stock.
+- Ensures cart quantities don't exceed product stock.
 
-- Checkout Flow:
+### Checkout Flow:
 
 Displays detailed checkout receipt including:
 
-Subtotal of all items
+- Subtotal of all items
 
-Shipping cost (if applicable)
+- Shipping cost (if applicable)
 
-Total amount
+- Total amount
 
 Updated customer balance
 
- - Validates:
+ ### Validates:
 
-Cart is not empty
+- Cart is not empty
 
-Products are in stock and not expired
+- Products are in stock and not expired
 
-Customer has sufficient balance
+- Customer has sufficient balance
