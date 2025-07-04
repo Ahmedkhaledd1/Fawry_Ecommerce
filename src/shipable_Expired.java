@@ -1,14 +1,15 @@
 import java.time.LocalDate;
 
-public class Shipable_Expired   extends Product  implements shipping{
-    private String name;
-    private Double weight;
+public class shipable_Expired  extends Product implements shipping{
+
+    private double weight;
 
     private LocalDate expiryDate;
 
-    public Shipable_Expired(String name, double price, int quantity,LocalDate expiryDate) {
+    public shipable_Expired(String name, double price, int quantity,LocalDate expiryDate,double weight) {
         super(name, price, quantity);
         this.expiryDate=expiryDate;
+        this.weight=weight;
     }
 
     @Override
@@ -25,7 +26,7 @@ public class Shipable_Expired   extends Product  implements shipping{
 
     public boolean isExpired(){
 
-            return expiryDate.isBefore(LocalDate.now());
+        return expiryDate.isBefore(LocalDate.now());
     }
 
     @Override

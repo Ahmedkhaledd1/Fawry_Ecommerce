@@ -1,6 +1,6 @@
 public class shipable_notExpired extends Product implements shipping{
 
-    private  Double weight;
+    private  double weight;
 
     public shipable_notExpired(String name, double price, int quantity, double weight) {
         super(name, price, quantity);

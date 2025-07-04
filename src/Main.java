@@ -17,7 +17,7 @@ public class Main {
            int qty = c.products.get(p);
            subamount += p.getPrice() * qty;
 
-           // ✅ add shipping items to list and add also their quantity
+           //  add shipping items to list and add also their quantity
            if (p instanceof shipping) {
 
                    shippingProducts.add((shipping) p);
@@ -68,8 +68,60 @@ public class Main {
         cart.add(food,2);
        Checkout(c1,cart);
 
+       //------------------------------------------------------------------------------------------------------------4
+        System.out.println("----------------------------------------------------------------------------");
+        //example 2 check not shipable not expired
+        Customer c2=new Customer(5000);
+        Cart cart2=new Cart();
+       Product x=new notShipable_notExpired("scratch card",300,14);
+        cart2.add(x,2);
+        Checkout(c2,cart2);
 
 
+        //------------------------------------------------------------------------------------------------------------4
+        System.out.println("----------------------------------------------------------------------------");
+        //example 3 check  shipable and expired product
+        Customer c3=new Customer(1000);
+        Cart cart3=new Cart();
+        Product milk= new shipable_Expired("milk",20,30, LocalDate.of(2025, 12, 24),40);
+        cart3.add(milk,2);
+        Checkout(c3,cart3);
+
+
+
+//-------------------------------------------------------------------------------------
+        // example 4 empty cart
+        System.out.println("----------------------------------------------------------------------------");
+        Customer c4=new Customer(1000);
+        Cart cart4=new Cart();
+        Checkout(c4,cart4);
+
+
+
+//-------------------------------------------------------------------------------------
+        // example 5 not enough money
+        System.out.println("----------------------------------------------------------------------------");
+        Customer c5=new Customer(500);
+
+        Product tv=new notShipable_notExpired("tv",300,14);
+        Cart cart5=new Cart();
+        cart5.add(tv,4);
+        Checkout(c5,cart5);
+
+
+
+        //------------------------------------------------------------------------------------------------
+        // example 6 product expired
+        System.out.println("----------------------------------------------------------------------------");
+        Customer c6=new Customer(500);
+
+        Product choclate=new notShipable_Expired("chocolate",100,30, LocalDate.of(2025, 3, 24));
+        Cart cart6=new Cart();
+        cart6.add(choclate,2);
+        Checkout(c6,cart6);
     }
+
+
+
 
 }

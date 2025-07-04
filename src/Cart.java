@@ -6,7 +6,7 @@ public class Cart {
 
     public void add(Product p,int count){
         if (p.isExpired()) {
-            System.out.println("Error: "+p.getName()+" is  expired");
+            System.out.println("Error: "+p.getName()+" is  expired and cannot be added to the cart");
 
         }
         else if(count<p.getQuantity()) {
